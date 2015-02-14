@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Enter name</title>
+    <script>
+
+    function Greetings(num) {
+
+      switch (num) {
+
+      case '1':
+        document.EnterName.Greeting.value=
+        "Good morning " + document.EnterName.myName.value + "!";
+        break;
+      case '2':
+        document.EnterName.Greeting.value=
+        "Good afternoon " + document.EnterName.myName.value + "!";
+        break;
+      case '3':
+        document.EnterName.Greeting.value=
+        "Good evening " + document.EnterName.myName.value + "!";
+        break;
+      case '4':
+        document.EnterName.Greeting.value=
+        "Happy Valentine " + document.EnterName.myName.value + "!";
+        break;
+      default:
+        alert('No greetings matched.');
+    }
+
+    }
+
+    function Reset() {
+      document.getElementById("myForm").reset();
+    }
+
+    </script>
+
+  </head>
+
+  <body>
+    <header>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="./NumberBuild.html">NumberBuild</a></li>
+      </ul>
+      <h2>Enter name</h2>
+    </header>
+
+    <form name="EnterName" id="myForm">
+      <ul>
+        <li>Name <input type="text" name="myName" size="40"></li>
+        <li>Choose what greetings you want
+          <ol>
+          <li><input type="button" value="morning" onclick="Greetings('1')"></li>
+            <li><input type="button" value="afternoon" onclick="Greetings('2')"></li>
+            <li><input type="button" value="evening" onclick="Greetings('3')"></li>
+            <li><input type="button" value="valentine" onclick="Greetings('4')"></li>
+            </ol>
+            <li><input type="text" name="Greeting" size="40"></li>
+        </li>
+        <li><input type="button" value="Reset" onclick="Reset()"></li>
+      </ul>
+    </form>
+  </body>

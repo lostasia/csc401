@@ -1,0 +1,53 @@
+html {
+  margin:0;
+  padding: 0;
+  width: auto;
+  height: auto;
+}
+
+body {
+  background-image:url("../img/sky.jpg");
+  background-size: cover;
+  font-family:Helvetica, sans-serif;
+  color: #fff;
+}
+
+header h2 {
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+  font-size: 2em;
+  font-family: Helvetica, sans-serif;
+  font-weight: normal;
+  line-height: 1em;
+
+}
+
+
+#proj {
+  text-align: center;
+}
+
+a:hover {
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+
+ul {
+  list-style-type: none;
+
+}
+
+ul li {
+  display: inline-block;
+  margin-right: 2em;
+}
+
+ul li a {
+  text-decoration: underline #fff;
+  text-decoration-style: dotted;
+  font-family:Helvetica, sans-serif;
+  position: relative;
+  color: #fff;
+}
