@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Randomize-In-Place</title>
+  <script type="text/javascript" src="RandomizeInPlace.js"></script>
+  <link rel="stylesheet" media="screen" href="RandomizeInPlace.css" />
+  <script>
+  </script>
+</head>
+
+<body onload="initArray()">
+
+  <header>
+    <div class="menu">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+      </ul>
+    </div>
+    <h2>Randomize-In-Place</h2>
+  </header>
+
+  <p id="centralize-intro">This is an animation of the Randomize-In-Place algorithm from
+    <em>Introduction to Algorithm</em>. </p>
+
+    <div id="centralize-button">
+    <button id="button1" onclick="next()">Step</button>
+    <button id="button2" onclick="initArray()">Reset</button>
+
+    </div>
+
+    <div id="centralize-code">
+    <div class="pseudocode">
+
+        <p><strong>RANDOMIZE-IN-PLACE(<em>A</em>)</strong></p>
+
+        <pre><span id="code1"><strong> &gt; </strong></span>n = A.<em>length</em></pre>
+
+        <pre><span id="code2"><strong> &gt; </strong></span><b>for</b> <em>i</em> = 1 <b>to</b> <em>n</em></pre>
+
+        <pre>   <span id="code3"><strong> &gt; </strong></span>swap A[<em>i</em>] with A[RANDOM(<em>i</em>, <em>n</em>)]</pre>
+
+    </div>
+    <p id="end"><strong>FINISH!</strong><br><br>Click "Reset" button to play again.</p>
+  </div>
+
+  <div id="centralize-array">
+
+    <div id="icon">
+        <div class="cell" id="x0">
+          <div class="number" id="i0"></div>
+        </div>
+        <div class="cell" id="x1">
+          <div class="number" id="i1"></div>
+        </div>
+        <div class="cell" id="x2">
+          <div class="number" id="i2"></div>
+        </div>
+        <div class="cell" id="x3">
+          <div class="number" id="i3"></div>
+        </div>
+        <div class="cell" id="x4">
+          <div class="number" id="i4"></div>
+        </div>
+        <div class="cell" id="x5">
+          <div class="number" id="i5"></div>
+        </div>
+        <div class="cell" id="x6">
+          <div class="number" id="i6"></div>
+        </div>
+        <div class="cell" id="x7">
+          <div class="number" id="i7"></div>
+        </div>
+        <div class="cell" id="x8">
+          <div class="number" id="i8"></div>
+        </div>
+        <div class="cell" id="x9">
+          <div class="number" id="i9"></div>
+        </div>
+        <div class="cell" id="x10">
+          <div class="number" id="i10"></div>
+        </div>
+        <div class="cell" id="x11">
+          <div class="number" id="i11"></div>
+        </div>
+        <div class="cell" id="x12">
+          <div class="number" id="i12"></div>
+        </div>
+        <div class="cell" id="x13">
+          <div class="number" id="i13"></div>
+        </div>
+        <div class="cell" id="x14">
+          <div class="number" id="i14"></div>
+        </div>
+        <div class="cell" id="x15">
+          <div class="number" id="i15"></div>
+        </div>
+    </div>
+
+    <div id="array">
+        <div class="cell" id="c0">
+          <div class="number" id="n0"></div>
+        </div>
+        <div class="cell" id="c1">
+          <div class="number" id="n1"></div>
+        </div>
+        <div class="cell" id="c2">
+          <div class="number" id="n2"></div>
+        </div>
+        <div class="cell" id="c3">
+          <div class="number" id="n3"></div>
+        </div>
+        <div class="cell" id="c4">
+          <div class="number" id="n4"></div>
+        </div>
+        <div class="cell" id="c5">
+          <div class="number" id="n5"></div>
+        </div>
+        <div class="cell" id="c6">
+          <div class="number" id="n6"></div>
+        </div>
+        <div class="cell" id="c7">
+          <div class="number" id="n7"></div>
+        </div>
+        <div class="cell" id="c8">
+          <div class="number" id="n8"></div>
+        </div>
+        <div class="cell" id="c9">
+          <div class="number" id="n9"></div>
+        </div>
+        <div class="cell" id="c10">
+          <div class="number" id="n10"></div>
+        </div>
+        <div class="cell" id="c11">
+          <div class="number" id="n11"></div>
+        </div>
+        <div class="cell" id="c12">
+          <div class="number" id="n12"></div>
+        </div>
+        <div class="cell" id="c13">
+          <div class="number" id="n13"></div>
+        </div>
+        <div class="cell" id="c14">
+          <div class="number" id="n14"></div>
+        </div>
+        <div class="cell" id="c15">
+          <div class="number" id="n15"></div>
+        </div>
+    </div>
+  </div>
+</body>
+</html>

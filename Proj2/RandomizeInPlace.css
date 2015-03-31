@@ -1,0 +1,135 @@
+html {
+  margin:0;
+  padding: 0;
+  width: auto;
+  height: auto;
+}
+
+body {
+  background-image:url("img/sky.jpg");
+  background-size: cover;
+  font-family:Helvetica, sans-serif;
+  color: #fff;
+}
+
+header h2 {
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+  font-size: 2em;
+  font-family: Helvetica, sans-serif;
+  font-weight: normal;
+  line-height: 1em;
+}
+
+
+#proj {
+  text-align: center;
+}
+
+a:hover {
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+
+.menu ul {
+  list-style-type: none;
+
+}
+
+.menu ul li {
+  display: inline-block;
+  margin-right: 2em;
+}
+
+.menu ul li a {
+  text-decoration: underline #fff;
+  text-decoration-style: dotted;
+  font-family:Helvetica, sans-serif;
+  position: relative;
+  color: #fff;
+}
+
+
+.text {
+  margin:2em;
+  text-align: center;
+}
+
+button {
+
+	text-indent:0;
+	border:1px solid #fff;
+  background: none;
+	display:inline-block;
+	color:#fff;
+	font-size: 13px;
+	height:40px;
+	width:60px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:0.3px 0.3px 0px #ffffff;
+}
+button:hover {
+	background-color:#fff;
+  opacity: 0.5;
+}
+
+button:active {
+	position:relative;
+	top:1px;
+}
+
+#button2 {
+  margin-left: 20px;
+}
+
+.pseudocode {
+  border: 2px solid #fff;
+  padding: 5px 5px 5px 5px;
+  width: 18em;
+  margin: 2em 0;
+}
+
+
+.cell {
+  float: left;
+  height: 2.8em;
+  width: 2.8em;
+  line-height: 2.5em;
+  border: 3px dotted #fff;
+
+}
+
+.number {
+  text-align: center;
+  font-weight: bold;
+}
+
+
+#centralize-intro {
+  width: 680px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+
+#centralize-button {
+  width: 150px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+#centralize-code {
+  width: 280px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+#centralize-array {
+  width: 820px;
+  margin-left:auto;
+  margin-right:auto;
+}

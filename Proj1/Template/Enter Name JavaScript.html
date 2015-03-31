@@ -1,0 +1,59 @@
+
+<!-- saved from url=(0064)http://www.cs.miami.edu/~burt/learning/Math119/js-EnterName.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>
+Enter Name JavaScript
+</title>
+<script>
+function getName() {
+   document.EnterName.Greeting.value=
+      "Greetings " + document.EnterName.myName.value + "!"
+}
+</script>
+<style>@-moz-keyframes nodeInserted{from{opacity:0.99;}to{opacity:1;}}@-webkit-keyframes nodeInserted{from{opacity:0.99;}to{opacity:1;}}@-o-keyframes nodeInserted{from{opacity:0.99;}to{opacity:1;}}@keyframes nodeInserted{from{opacity:0.99;}to{opacity:1;}}embed,object{animation-duration:.001s;-ms-animation-duration:.001s;-moz-animation-duration:.001s;-webkit-animation-duration:.001s;-o-animation-duration:.001s;animation-name:nodeInserted;-ms-animation-name:nodeInserted;-moz-animation-name:nodeInserted;-webkit-animation-name:nodeInserted;-o-animation-name:nodeInserted;}</style></head>
+<body>
+
+<h2>Enter Name</h2>
+
+<form name="EnterName">
+<table>
+<tbody><tr>
+  <td>
+     <b>1.</b>
+  </td>
+  <td>
+     Enter your name: 
+  </td>
+  <td>
+     <input type="text" name="myName" size="40">
+   </td>
+</tr>
+<tr>
+   <td>
+      <b>2.</b>
+   </td>
+   <td>
+      Click here when done:
+   </td>
+   <td>
+      <input type="button" value="Here" onclick="getName()">
+   </td>
+</tr>
+<tr>
+   <td>
+      <b>3.</b>
+   </td>
+    <td>
+      Your personalized greeting:
+   </td>
+   <td>
+      <input type="text" name="Greeting" size="40">
+   </td>
+</tr>
+</tbody></table>
+
+<p>
+</p></form>
+
+
+</body></html>

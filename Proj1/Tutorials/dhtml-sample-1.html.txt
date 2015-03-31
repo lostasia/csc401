@@ -1,0 +1,355 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<!-- 
+     title: An annotated DHTML document
+     author: burt rosenberg
+     date: 1 Feb 2012
+     last update:
+-->
+
+<!-- these are html comments -->
+
+<!-- an html document is enclosed between beginning and ending html tags.-->
+<html>
+<!-- an html document has two parts, a head and a body. the head is enclosed by head tags.-->
+<head>
+
+<!-- the head part contains a title element.
+     the title element is copied to the browser's title bar.
+     the title element is created by text enclosed in beginning and
+     ending "title" tags. -->
+<title>An Annotated DHTML Document</title>
+
+<!-- Linking to external documents:
+
+   style sheets set the parameters that determine visual style.
+   often the style sheets is stored separately, so that a change in 
+   one file will update the entire site.
+   
+   (Commented out since we are not using this feature now)
+   
+<link href="mystyle.css" rel="stylesheet" type="text/css">
+
+   scripts can also be stored in a separate file and brought into the
+   page. Since the src gives no path, the browser will return to the
+   location of this page to request the file by the name myjavascript.js.
+   
+   (Commented out since we are not using this feature now)
+      
+<script type="text/javascript" src="myjavascript.js"></script>
+-->
+
+
+<style type="text/css">
+   /* internal styles: this is CSS language, it has
+      C-like comments. 
+      
+      Here is an illustrative use of CSS. Elements 
+      in the "class" colormypage will be in the 
+      given color, selected here. The dot in front
+      means "class"
+   */
+
+.colormydiv { color: orange; }
+.colormyspan { color: blue; }
+
+   /* 
+      Modifications to h4, h3, body and table tags are made
+      but overriding, part of "the casade".
+      Not dot in front means apply to named tag.
+ */      
+
+h4 {color: blue; }
+h3 {color: purple; }
+body {font-family: sans-serif; 
+      padding: 0em 2em; }
+table { margin-left: 4em ; }
+
+</style>
+
+
+<!-- end of the head section -->
+</head>
+
+<!-- the body is enclosed by body tags -->
+<body>
+
+<h3>An Annotated DHTML Document</h3>
+
+
+<!-- HTML doesn't care about white space, such a blank lines.
+     To start a paragraph, use the P tag. To line break without the
+     paragraph spacing, us a BR tag. -->
+     
+<p><em>Burton Rosenberg<br>Feburary 2012</em>
+
+<p>
+This is a page of HTML, annotated to explain concepts, and giving a number
+of example HTML tags, CSS styles, and javascript programs, so as to be 
+a useful starting point for understanding DHTML. 
+To see the annotations, either "show source" on your browser, or use
+<a href="dhtml-sample-1.html.txt">this link to view the source</a>. 
+There is <em>a lot</em> of comments that you only see in the source.
+
+<!-- tags can have attributes applied, using the syntax name=value.
+     often the value is put in quotes, but if there are no special characters
+     it does not need to be in quotes. 
+     you need to memorize the names of your favorite attibutes for each
+     sort of tag. -->
+
+<h4>&bull; About lists and typefaces</h4>
+
+<!-- The various HTML elements describe the page. 
+     They can describe an unordered list, for instance. 
+     The list is enclosed in UL tags, and each element in the list is set off 
+     with an LI tag. -->
+
+<p>
+List structures are described by three tags. The "unordered list" uses
+the ul tag. Each element in the list is introduced by an li tag. Lists
+can be nested. The browser will layout the list, according to built-in 
+rules, modified by the style sheets. 
+
+<ul>
+
+    <li>
+    <!-- text inside an I element are rendered in italic -->
+    Usually there is an <i>italic face</i> in the family. 
+    
+    <!-- text inside is B tag is renderd bold -->
+    <li>Usually there is an <b>bold face</b> in the family.
+    
+    <!-- text inside of an EM tag, which will be set by the page designer to a typeface that expresses emphasis -->
+    <li>Rather than a precise face, designers can ask for <em>emphasized text</em>. 
+    
+    <!-- text inside of an STRONG tag, will be set by the page designer to a typeface that expresses strength -->
+    <li>Or for <strong>strong text</strong>.
+
+</ul>
+
+<h4>&bull; About block elements and in-line elements</h4>
+
+<p>
+Tags such as P, UL and H4 are block. They are typeset by 
+separating from the flow of the text. Tags such as EM and I are in-line. 
+The typesetting collects in-line elements into lines.
+
+<p>
+The generic block element is a DIV element. The generic in-line 
+element is a SPAN element.
+
+<h4>&bull; About the cascade</h4>
+
+<!-- we will set a name tag at this location.
+     we can go to as a URL using # -->
+     
+<p>
+Casading Style Sheets, CSS, has a separate definition from HTML. 
+It sets the style to be applied to the HTML template. It sets colors,
+fonts, page width, typesetting style, and so on. CSS can be embedded
+in the page, or given by a URL in the src attribute of a link tag in the
+header of and HTML page, or it can be clipped right on an HTML element
+using the style attribute of the element.
+
+<p>
+A CSS is a list of rules each with a selector that determines which
+element will recieve the rule, and a sequence of declarations where are
+the style elements. Each declaration is a property-value pair. 
+The cascade is about which rule applies, when there are several rules
+that can apply. The several sources of rules cascade in order to overly
+new rules over old rules, and more specific rules over more general rules.
+
+<!-- This is an example of a style applied to a tag. In the cascade these
+     (tend to) trump all style rules -->
+<p>
+If the rules are applied to the tag, then the selection is implicitly
+to the element. <span style="color: green;">Here is an example</span>.
+
+<!-- Tags either are of div type or span type. 
+     Div type are typeset in blocks. They are any sort of text
+     that gets set like a paragraph.
+     Span type are set in-line with the rest of the text.
+     
+     Headings are a div type text that is intentional. 
+     It sets up a heading, whether the number h1, h2, h3, etc., 
+     descends in importance -->
+
+<p>
+Rules can be applied through selectors on rules that are either specified
+in the header of the page, or brought in through an external style sheet. 
+In the cascade, external style sheets are at the bottom on the cascade and
+have the least priority. Selectors can indicate a tag, an id or a class. 
+To apply a selector to an id, the tag has attribute id with the selector's
+name. The selector appears in the CSS with a # before it. To apply a selector
+to  a class, the tag has attribute class with th selector's name as value.
+The selector appears in the CSS with a . before it.
+
+<div class="colormydiv">
+Here is how a block element (DIV) is made to be of a class. 
+Here is how a <span class="colormyspan">in-line element (SPAN)</span> is made
+part of a class.
+</div>
+
+<!-- anchor tags, A, introduce either names, which are locations on a page,
+     or provide for hyperlinks. 
+     
+     The href attribute is the target of the
+     link. It is a URL, and you should look on the web to learn about the
+     complicated URL syntax. 
+     
+     The name attribute marks a location in a page, so jumps can be 
+     made to a specific location in the page. The # notation is
+     formally called a fragment.
+     -->
+     
+<h4>&bull; <a name="anchors">About anchors and hyperlinks</a></h4>
+
+<p>
+Jump to the section <a href="#anchors"><em>About anchors and hyperlinks</em></a>.
+
+<p>
+Jump to <a href="http://www.cs.miami.edu/home/burt">my home page</a>.
+
+<p>
+Invoke a short <a href="javascript:alert('Hello DHTML!');">javascript program</a>.
+
+<h4>&bull; About entities</h4>
+
+<p>
+Characters which cannot othwise be represented by typing can be
+placed in the text using <em>entities</em>. An entity is a character
+squence beginning with an ampersand and ending with a semicolon. 
+Here is a table showing what is in the text in the left column, 
+and how that letter sequence appears in the browser in the right column.
+
+<table border=1>
+<tr><th>entity<th>glyph
+<tr><td>&amp;amp;<td>&amp;
+<tr><td>&amp;gt;<td>&gt;
+<tr><td>&amp;lt;<td>&lt;
+<tr><td>&amp;eacute;<td>&eacute;
+<tr><td>&amp;mdash;<td>&mdash;
+<tr><td>&amp;crarr;<td>&crarr;
+</table>
+
+
+<h4>&bull; About floats and tables</h4>
+
+<p>
+Actually, we are not going to cover floats, they are too complicated. 
+We will go over tables. And we will introduce one DHTML technique, 
+using javascript.  
+
+<p>
+Tables elements are enclosed in TABLE tags. Inside a table are
+row elements enclosed in TR tags. Inside each row are data cells 
+enclosed in TD tags, or header cells enclosed in TH cells. The only
+difference between data and header cells is the default formatting 
+that is applied. Although proper HTML will close TR's, TD's and TH's
+with closing TR's, TD's and TH's, it usually doesn't matter.
+
+<table border=1>
+<tr><th><th>boys<th>girls
+<tr><th>trucks<td>6<td>4
+<tr><th>dolls<td>3<td>6
+</table>
+
+<h4>&bull; <a name="javascript">About javascript</a></h4>
+
+<p>
+Javascript programs can use document.write to put data into the page
+exactly where the script is run. Script tags are needed to enclose
+a script, and it will run. This table is dynamically generated by
+a javascript program that loops creating rows in the table.
+
+<table border=1>
+<tr><th>i<th>fib(i)
+<script type="text/javascript">
+/* the fibonacci sequence. 
+   starting from a and b both 1, we update so that
+   the new value of b is the old value of a, and the
+   new value of a is the sum of the old values of a
+   and b. each time through the loop we write into
+   the html a table row with the loop counter and 
+   the value of b */
+a = 1 ;
+b = 1 ;
+for (i=1;i<10;i++) {
+    a = a + b ;
+    b = a - b ;
+    document.write('<tr><td>'+i+'<td>'+b) ;
+}
+</script>
+</table>
+
+<h4>&bull; About FORMS and javascript</h4>
+
+<!-- FORM elements are a way to use HTML to input information.
+    A FROM has various widgets, such as text boxes, radio boxes, buttons, etc., 
+    that allow for user interation. Before DHTML, the form always resulted in
+    a submission, which sent the information the user entered to a server
+    for processing. The ACTION attribute of the FORM element specfied where
+    to which server the data would be sent.
+    
+    With the advent of DHTML, the form widgets are reused. The syntax is a 
+    bit senseless because the new system was just overlayed over the old 
+    system. For instance, the widgets have to be enclosed in FORM tags 
+    for no good reason.
+    
+    The form elements can be accessed in several ways, because of this long 
+    and confused heritage. When a from is submitted, the NAME attribute of 
+    the element is given along with the value. We could have accessed the
+    element by its name, however in this example we have used the elemnt's Id.
+    
+    And hence we get an introduction to the DOM, the Document Object Model.
+    
+    The document object, accessed by the global variable document, has a 
+    getElementById method. It returns the element object of the element with
+    the given Id. Depending on the element, this object has various properties. 
+    Access and set the text in an textbox input element by the value property.
+    Determine if a radio box is selected by the boolean valued checked property.
+
+    Button elements can specify the onclick HTML attribute. This attribute is 
+    set to a javascript function which is invoked when the button is clicked.
+    -->
+
+<script type="text/javascript">
+    function myform(){ 
+        /* var is a good idea. It makes a variable local to the function, like C */
+        var gendervalue = "" ;
+        var e ;
+        if ((e=document.getElementById('form-gender-mr')).checked) { gendervalue = e.value ; }
+        if ((e=document.getElementById('form-gender-ms')).checked) { gendervalue = e.value ; }
+        document.getElementById('form-text-out').value = "Greetings "
+                +gendervalue+" "
+                +document.getElementById('form-text-in').value ;
+    }
+</script>
+
+<form>
+    <table>
+        <tr><td>Name<td><input id="form-text-in" name="form-name" type="textbox" value="Your Name">
+        <tr><td>Title<td><input id="form-gender-mr" name="form-name" type="radio" value="Mr.">Mr.<input id="form-gender-ms" name="form-name" type="radio" value="Ms.">Ms.
+        <tr><td><input type="button" value="Make Greeting" onclick="myform();"><td><input id="form-text-out" name="form-name" type="textbox">
+    </table>
+</form>
+
+<h4>&bull; About References</h4>
+
+<ul>
+<li><a href="http://www.w3.org/TR/html4/">HTML 4 Specification,</a> the W3C.
+<li><a href="http://www.w3.org/TR/CSS2/">CSS 2 Specification,</a> the W3C.
+<li><a href="https://developer.mozilla.org/en/JavaScript">Javascript</a> at Mozilla.
+<li><a href="https://developer.mozilla.org/en/DOM">Document Object Model</a> at Mozilla.
+<li><a href="http://headfirstlabs.com/books/hfhtml/">Head First HTML</a> from O'Reilly (a really fun way to learn HTML)
+</ul>
+
+<p style="color:purple;margin:3em 0em;">
+Copyright (C) 2012 Burton Rosenberg. All rights reserved.
+
+<!-- end the body section -->
+</body>
+
+<!-- end the html document -->
+</html>
+

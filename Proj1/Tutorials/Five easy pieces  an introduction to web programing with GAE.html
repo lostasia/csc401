@@ -1,0 +1,239 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- saved from url=(0060)http://www.cs.miami.edu/home/burt/learning/five-easy-pieces/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<title>
+Five easy pieces: an introduction to web programing with GAE
+</title>
+<!--<base href="http://www.cs.miami.edu/~burt/learning/five-easy-pieces/">--><base href=".">
+<link type="text/css" href="./Five easy pieces  an introduction to web programing with GAE_files/course.css" rel="stylesheet">
+<style type="text/css">
+   .todo { color: green ; }
+</style>
+<style>@-moz-keyframes nodeInserted{from{opacity:0.99;}to{opacity:1;}}@-webkit-keyframes nodeInserted{from{opacity:0.99;}to{opacity:1;}}@-o-keyframes nodeInserted{from{opacity:0.99;}to{opacity:1;}}@keyframes nodeInserted{from{opacity:0.99;}to{opacity:1;}}embed,object{animation-duration:.001s;-ms-animation-duration:.001s;-moz-animation-duration:.001s;-webkit-animation-duration:.001s;-o-animation-duration:.001s;animation-name:nodeInserted;-ms-animation-name:nodeInserted;-moz-animation-name:nodeInserted;-webkit-animation-name:nodeInserted;-o-animation-name:nodeInserted;}</style></head>
+<body>
+
+<div id="header">
+<p class="title">
+Five easy pieces: an introduction to web programing with GAE
+</p>
+<i>
+<br>Prof. B. Rosenberg
+<br>First offered: August 2012
+</i>
+</div>
+
+
+<p class="section">
+Announcements
+</p>
+<ul>
+<li>Course optimized for OSX
+</li><li>The <a href="http://burt-easy-pieces.appspot.com/">Easy Piece App</a>
+</li></ul>
+
+<p class="section">
+Class notes
+</p>
+
+<ul>
+<li>First easy piece:
+    <ul>
+    <li>Wepapp architecture
+    <ul>
+    <li>A web app is: a browser, an HTTP server, and a backend data store.
+    </li><li>The server runs a <a href="http://en.wikipedia.org/wiki/LAMP_%28software_bundle%29">LAMP</a>
+    stack of <a href="http://en.wikipedia.org/wiki/Open-source_software">Open Source Software</a>:
+       <ul>
+       <li>Linux (it could be FreeBSD), 
+       </li><li><a href="http://www.apache.org/">Apache</a>, the web server.
+       </li><li><a href="http://dev.mysql.com/">MySQL</a>, the "community" release.
+       </li><li>and PHP or Python or Perl. 
+       </li></ul>
+    </li><li>The browser renders <a href="https://developer.mozilla.org/docs/HTML">HTML</a> 
+    under the direction  of <a href="https://developer.mozilla.org/docs/CSS">CSS</a>.
+    </li><li>The browser runs local <a href="https://developer.mozilla.org/docs/JavaScript">Javascript code</a> 
+    and interacts with the page using the 
+    <a href="https://developer.mozilla.org/docs/DOM">DOM</a>.
+    </li><li>The browser communicates to the HTTP server using GET, POST and PUT requests.
+    </li><li>The browser uses either FORMS or 
+    <a href="https://developer.mozilla.org/docs/Ajax">AJAX</a> to make these requests,
+    using <a href="https://developer.mozilla.org/docs/JSON">JSON</a>.
+    </li><li>The server keeps track of things using a database, using SQL statements.
+    </li></ul>
+
+    </li><li>The Google App Engine.
+    <ul>
+     <li>The Google App Engine replaces the HTTP  server and backend store with
+    a cloud architecture.
+    </li><li>The GAE aids scalablity by replicating your app on-demand.
+    </li><li>The GAE removes administration by being a cloud computing platform for Python.
+    </li><li><a href="http://yaml.org/">YAML</a>
+    </li><li>Download <a href="https://developers.google.com/appengine/">Google App Engine</a> for Python
+    </li></ul>
+    </li><li>MacOS and GAE
+    <ul>
+    <li>The terminal OSX app, and the unix command line (<a href="http://www.cs.miami.edu/~burt/learning/unixmini">see unix minicourse</a>)
+        </li><li>The Python language, object oriented programing
+       </li><li>Python, using Idle on OSX. (<a href="http://www.cs.miami.edu/~burt/learning/five-easy-pieces/newwb/standalone.py">programs</a>)
+       </li><li><a href="http://www.barebones.com/products/TextWrangler/">TextWrangler</a>
+    </li></ul>
+    </li></ul>
+</li><li>Second easy piece:
+    <ul>
+
+        <li>Basic HTML and CSS, concepts.
+     </li><li><a href="http://www.cs.miami.edu/~burt/learning/five-easy-pieces/whycss.html">Why CSS?</a>
+     </li><li><a href="http://www.csszengarden.com/">The CSS Zen Garden</a>
+    </li><li>The CSS visual model:
+    <ul>
+   <li><a href="http://www.cs.miami.edu/~burt/learning/five-easy-pieces/workbook/margin.html">Box Model</a>
+   </li><li><a href="http://www.cs.miami.edu/~burt/learning/five-easy-pieces/workbook/floats0.html">Floats:</a> Introduction.
+   </li><li><a href="http://www.cs.miami.edu/~burt/learning/five-easy-pieces/workbook/floats1.html">Floats I:</a> Float placement.
+   </li><li><a href="http://www.cs.miami.edu/~burt/learning/five-easy-pieces/workbook/floats2.html">Floats II:</a> Float drops.
+   </li><li><a href="http://www.cs.miami.edu/~burt/learning/five-easy-pieces/workbook/floats3.html">Floats III:</a> Float overflow.
+   </li><li><a href="http://www.cs.miami.edu/~burt/learning/five-easy-pieces/workbook/tables.html">Tables</a>
+   </li></ul>
+       </li><li>Templates with <a href="http://jinja.pocoo.org/">Jinja</a>
+   </li><li><a href="http://www.cs.miami.edu/home/burt/learning/Csc609.122/practicum/dhtml-sample-1.html">DHTML sample</a> (as <a href="http://www.cs.miami.edu/home/burt/learning/Csc609.122/practicum/dhtml-sample-1.html.txt">source</a>)
+   </li></ul>
+</li><li>Third easy piece:
+   <ul>
+   <li><a href="https://developers.google.com/appengine/docs/python/tools/webapp/">webapp</a>
+   </li><li><a href="http://www.w3.org/TR/html4/interact/forms.html">Forms</a>
+   </li><li><a href="http://en.wikipedia.org/wiki/Uniform_Resource_Locator">URL's</a>
+   </li><li>HTTP, encoding format for a GET (queries), PUT an POST, REST.
+   </li><li><a href="http://www.cs.miami.edu/~burt/learning/five-easy-pieces/workbook/posttrace.html">Protocol trace</a> of a PUT
+   </li></ul>
+</li><li>Fourth easy piece
+    <ul>
+    <li>Learning a bit about <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Guide">Javascript,</a> 
+    some examples:
+       <ul>
+       <li><a href="http://www.cs.miami.edu/home/burt/learning/Math119/js-HelloWorld.html">Hello world</a>
+       </li><li><a href="http://www.cs.miami.edu/home/burt/learning/Math119/js-EnterName.html">Enter name</a>
+       </li><li><a href="http://www.cs.miami.edu/home/burt/learning/Math119/js-ComputeAverage.html">Computer average</a>
+       </li><li><a href="http://www.cs.miami.edu/home/burt/learning/Math119/js-NumberBuild.html">Number build</a>
+       </li></ul>
+    </li><li><a href="https://github.com/nzakas/computer-science-in-javascript/">more examples</a>
+    </li><li><a href="http://prototypejs.org/">Prototype</a> and the <a href="http://www.mozilla.org/docs/dom/">Document Object Model</a> (DOM)
+    </li><li><a href="http://jsfiddle.net/">jsfiddle,</a> to learn Javascript
+        <ul>
+        <li><a href="http://www.cs.miami.edu/~burt/learning/five-easy-pieces/newwb/js_scope.html">Notes on scope</a>
+        </li><li><a href="http://www.cs.miami.edu/~burt/learning/five-easy-pieces/newwb/arrays_objects_dictionaries.html">Confounding Python and Javascript</a>
+        </li><li><a href="http://robertnyman.com/2008/10/09/explaining-javascript-scope-and-closures/">variable bindings</a>
+        </li><li><a href="http://www.robertsosinski.com/2009/04/28/binding-scope-in-javascript/">run-time scoping</a>
+        </li></ul>
+    </li><li><a href="http://byfat.xxx/if-hemingway-wrote-javascript">If Hemingway wrote Javacript (humor)</a>
+    </li></ul>
+</li><li>Fifth easy piece
+    <ul>
+    <li>Example appe: <a href="http://zinc-at-cs.appspot.com/hitcount/">the GAE hitcounter</a>
+    </li><li>Ajax:
+       <ul>
+       <li>XmlHttpRequest, by Microsoft, built into browsers
+       </li><li>Asynchronous Javascript And Xml.
+       </li></ul>
+    </li><li><a href="http://json.org/">JSON: JavaScript Object Notation</a>
+       <ul>
+       <li><a href="http://tools.ietf.org/html/rfc4627">RFC 4627</a>
+       </li><li>MIME type application/json
+       </li></ul>
+    </li><li>REST: Representational state transfer
+     </li><li><a href="http://prototypejs.org/">Prototype</a>
+     </li><li>Datastore
+     <ul>
+     <li><a href="http://www.cs.miami.edu/~burt/learning/Csc598.073/notes/reldb.html">Relational
+     databases</a>
+     </li><li><a href="https://developers.google.com/appengine/docs/python/gettingstarted/usingdatastore">GAE datastore</a>
+     </li><li><a href="https://developers.google.com/appengine/docs/python/datastore/overview">Overview of datastore</a>
+     </li><li><a href="https://sites.google.com/site/io/under-the-covers-of-the-google-app-engine-datastore">talking presentation of concepts</a>
+     </li></ul>
+    </li></ul>
+</li></ul>
+
+
+<p class="section">
+CRUD in 4 parts
+</p>
+<ol>
+<li>A CRUD using no indices( Forms/AJAX)
+</li><li>Index construction, queries
+</li><li>external keys, many-to-many constructions
+</li><li>Future proofing
+</li></ol>
+
+<p class="section">
+References (Internal)
+</p>
+<ul>
+<li><a href="http://www.cs.miami.edu/~burt/learning/five-easy-pieces/newwb/standalone.py">programs</a>
+</li><li><a href="http://www.cs.miami.edu/~burt/learning/five-easy-pieces/newwb/js_scope.html">Notes on scope</a>
+</li><li><a href="http://www.cs.miami.edu/~burt/learning/five-easy-pieces/newwb/arrays_objects_dictionaries.html">Confounding Python and Javascript</a>
+</li><li><a href="http://www.cs.miami.edu/~burt/learning/five-easy-pieces/workbook/margin.html">Box Model</a>
+</li><li><a href="http://www.cs.miami.edu/~burt/learning/five-easy-pieces/workbook/floats0.html">Floats:</a> Introduction.
+</li><li><a href="http://www.cs.miami.edu/~burt/learning/five-easy-pieces/workbook/floats1.html">Floats I:</a> Float placement.
+</li><li><a href="http://www.cs.miami.edu/~burt/learning/five-easy-pieces/workbook/floats2.html">Floats II:</a> Float drops.
+</li><li><a href="http://www.cs.miami.edu/~burt/learning/five-easy-pieces/workbook/floats3.html">Floats III:</a> Float overflow.
+</li><li><a href="http://www.cs.miami.edu/~burt/learning/five-easy-pieces/workbook/tables.html">Tables</a>
+</li><li><a href="http://www.cs.miami.edu/home/burt/learning/Csc609.122/practicum/dhtml-sample-1.html">DHTML sample</a> (as <a href="http://www.cs.miami.edu/home/burt/learning/Csc609.122/practicum/dhtml-sample-1.html.txt">source</a>)
+</li><li><a href="http://www.cs.miami.edu/~burt/learning/five-easy-pieces/workbook/posttrace.html">Protocol trace</a> of a PUT
+</li><li><a href="http://www.cs.miami.edu/~burt/learning/Csc598.073/notes/reldb.html">Relational databases</a>
+</li></ul>
+
+<p class="section">
+References (External)
+</p>
+<ul>
+<li><a href="http://www.w3.org/TR/html401/">HTML 4.01 Specification</a>
+</li><li><a href="http://www.w3.org/TR/CSS21/">CSS 2.1 Specification</a>
+</li><li><a href="http://www.php.net/tut.php">PHP Tutorial</a> and <a href="http://www.php.net/manual/en/">Reference Manual</a>
+</li><li><a href="http://dev.mysql.com/doc/refman/4.1/en/">MySQL Reference Manual</a>
+</li><li><a href="http://developer.mozilla.org/en/docs/JavaScript">JavaScript reference</a>
+</li><li><a href="http://www.ecma-international.org/publications/standards/Ecma-262.htm">Standrd ECMA-262:</a> ECMAScript Language Specification 3ird edition.
+</li><li><a href="http://www.mozilla.org/docs/dom/">Document Object Model</a> in Mozilla
+</li><li><a href="http://developer.mozilla.org/en/docs/AJAX">AJAX</a> documentation.
+</li><li><a href="http://tools.ietf.org/html/rfc2616">RFC 2616:</a> Hypertext Transfer Protocol -- HTTP/1.1
+</li><li><a href="http://tools.ietf.org/html/rfc2396">RFC 2396:</a> Uniform Resource Identifiers (URI): Generic Syntax
+</li><li><a href="http://tools.ietf.org/html/rfc2109">RFC 2109:</a> HTTP State management. I.e. Cookies! (See also <a href="http://tools.ietf.org/html/rfc2965">RFC 2965</a>.)
+</li><li><a href="http://tools.ietf.org/html/rfc1034">RFC 1034:</a> DNS.
+</li><li>Jemima Pereira's 
+<a href="http://ficml.org/jemimap/style/color/wheel.html">4096 Color Wheel</a>
+</li><li>More Crayon's <a href="http://www.morecrayons.com/palettes/webSmart/colorcube.php">color cube</a>, based on the RGB square.
+</li><li>The <a href="http://html-color-codes.com/">216 web 
+colors</a> arranged by VisiBone.
+</li><li><a href="http://www.37signals.com/svn/">Signal vs. Noise</a>
+</li><li><a href="http://gettingreal.37signals.com/">Getting Real</a>, development by 37signals.
+</li><li><a href="http://www.maedastudio.com/index.php">John Maeda</a>
+</li><li><a href="http://www.positioniseverything.net/">Position is Everything:</a> Modern browser bugs explained.
+</li><li><a href="http://alistapart.com/">A List Apart:</a> the art and industry of web sites.
+</li><li><a href="http://en.wikipedia.org/wiki/Representational_State_Transfer">REST:</a> 
+Representational State Transfer.
+</li><li><a href="http://www.acm.org/classics/nov95/toc.html">A relation model of data
+for large shared data banks,</a> E. F. Codd. Comm ACM 13(6) June 1970. pp 377-387.
+</li><li><a href="http://www.cs.miami.edu/~burt/learning/five-easy-pieces/notes/thirdmanifesto.pdf">The Third Manifesto</a> by Darwen and Date. About relational databases.
+</li><li><a href="http://www.utexas.edu/its/windows/database/datamodeling/index.html">Introduction to Data Modeling</a> with the relational model explained.
+</li><li><a href="http://www.cs.miami.edu/~burt/learning/five-easy-pieces/notes/webauth_tr.pdf">Dos and Don'ts of Client 
+Authentication on the Web</a> by K. Fu, E. Sit, K. Smith and N. Feamster.
+</li><li><a href="http://www.cs.miami.edu/~burt/learning/five-easy-pieces/notes/fu-lincoln-webauth.pdf">The Failure of Client Authentication the Web</a> by Kevin Fu.
+</li><li><a href="http://www.cs.miami.edu/~burt/learning/five-easy-pieces/notes/paper595.pdf">Defeating Script Injection Attacks
+with Bowser-Enforced Embedded Policies</a>, T. Jim, N. Swamy and M. Hicks, WWW 2007, 2007.
+</li><li><a href="http://en.wikipedia.org/wiki/Central_Authentication_Service">CAS:</a> the central authentication system.
+</li><li><a href="http://unixpapa.com/auth/">A Guide to Web Authentication Alternatives</a>, Jan Wolter
+</li><li><a href="http://home.comcast.net/~fjhirsch/Papers/wwwj/">Introducing SSL and Certificates using SSLeay</a> by Frederick Hirsch.
+</li><li><a href="http://www.madboa.com/geek/openssl/">OpenSSL 
+   Command-Line HOWTO</a> 
+</li><li><a href="https://www.pcisecuritystandards.org/">PCI Security 
+   Standards Council</a>
+</li><li><a href="http://www.cs.miami.edu/~burt/learning/five-easy-pieces/notes/rules_for_visa_merchants.pdf">Rules for 
+   Visa Merchants</a>
+</li><li><a href="http://dojotoolkit.org/">Dojo:</a> JavaScript Toolkit
+</li><li><a href="http://www.prototypejs.org/">Prototype:</a> a JavaScript Framework
+</li></ul>
+
+<p id="footer">
+    <a href="http://validator.w3.org/check?uri=referer"><img src="./Five easy pieces  an introduction to web programing with GAE_files/valid-html401" alt="Valid HTML 4.01 Strict" height="31" width="88"></a>
+</p>
+
+
+</body></html>
